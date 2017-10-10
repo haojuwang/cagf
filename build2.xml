@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="hibernatetools" basedir="." default="hibernate" >
+    <path id="toolslib">
+        <path location="./lib/hibernate-tools.jar"></path>
+        <path location="./lib/hibernate3.jar"></path>
+        <path location="./lib/freemarker.jar"></path>
+        <path location="./lib/dom4j-1.6.1.jar"></path>
+        <path location="./lib/commons-logging-1.0.4.jar"></path>
+        <path location="./lib/commons-collections-2.1.1.jar"></path>
+        <path location="./lib/mysql-connector-java-5.1.44.jar"></path>
+        <path location="dbconfig"></path>
+
+    </path>
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="toolslib" />
+
+    <target name="hibernate">
+        <hibernatetool destdir="src/main/java">
+            <configuration configurationfile="dbconfig/hibernate.cfg.xml"/>
+            <hbm2java jdk5="true"/>
+            <hbm2dao></hbm2dao>
+            <hbm2ddl export="false" outputfilename="sql.ddl" format="true"></hbm2ddl>
+            <hbm2doc destdir="help"></hbm2doc>
+
+        </hibernatetool>
+
+    </target>
+
+
+</project>

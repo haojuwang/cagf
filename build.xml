@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="hibernatetools" basedir="." default="run.persistence.export">
+    <property file="build.properties"></property>
+
+    <path id="ant.run.lib.path">
+        <pathelement path="${classes}"></pathelement>
+        <fileset dir="${lib}">
+            <include name="**/*.jar"></include>
+        </fileset>
+        <path location="dbconfig"></path>
+    </path>
+    <target name="init">
+        <path refid="ant.run.lib.path"></path>
+
+    </target>
+
+    <target name="set.hibernate.mappingfiles">
+        <fileset id="hibernate.mapping.files" dir="${dbconfig}">
+            <include name="**/*.hbm.xml"></include>
+        </fileset>
+        <pathconvert property="hibernate.mappings" refid="hibernate.mapping.files" pathsep=" "></pathconvert>
+
+    </target>
+
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask"
+             classpathref="ant.run.lib.path" />
+
+
+    <target name="run.persistence.export" depends="init,set.hibernate.mappingfiles">
+        <mkdir dir="${classes}"/>
+
+        <hibernatetool destdir="${src}">
+            <configuration configurationfile="${dbconfig}/hibernate.cfg.xml"/>
+            <hbm2java jdk5="true" destdir="${src}"/>
+        </hibernatetool>
+
+        <!--生成dao interface-->
+        <java classname="com.cagf.tool.hbm2dao.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+
+        <!--生成dao-->
+        <java classname="com.cagf.tool.hbm2daoimpl.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+        <!--生成server-->
+        <java classname="com.cagf.tool.hbm2service.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+        <!--生成server impl-->
+        <java classname="com.cagf.tool.hbm2serviceimpl.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+        <!--自动编译-->
+        <javac  srcdir="${src}" destdir="${classes}" nowarn="on"
+                debug="${java.debug}" classpathref="ant.run.lib.path"></javac>
+
+
+        <!--action代码的生成需要放在编译之后进行-->
+        <java classname="com.cagf.tool.hbm2action.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+    </target>
+
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

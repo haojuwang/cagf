@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.git.bean.DocumentitemEntity" table="documentitem" >
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name" column="name_"  type="java.lang.String" length="50"/>
+        <property name="authorId" column ="authorId_" type="java.lang.Long" not-null="true"/>
+        <property name="authorName" column = "authorName_"  type="java.lang.String" length="50"/>
+        <property name="date" column ="date_" type="timestamp" not-null="true"/>
+
+        <property name="realSize" column ="realSize_" type="java.lang.Integer" not-null="true"/>
+        <property name="size" column ="size_" type="java.lang.String" length="50" not-null="true"/>
+        <property name="randomName"  column ="randomName_"  type="java.lang.String" length="50" not-null="true"/>
+        <property name="type" column ="type_" type="java.lang.String"  length="50" not-null="true"/>
+
+    <many-to-one name="documentCatalog" column="documentCatalogId_" class="com.git.bean.DocumentCatalog"></many-to-one>
+    </class>
+</hibernate-mapping>
