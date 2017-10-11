@@ -26,5 +26,7 @@ public class CodeGenerator {
         System.out.println("create dao over");
         System.out.println("count " + count + " dao");
 
+        System.out.println("----------------------------------------------");
+
     }
 }

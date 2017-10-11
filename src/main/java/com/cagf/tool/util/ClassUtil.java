@@ -7,6 +7,7 @@ public class ClassUtil {
         HbmUtil hbmUtil = new HbmUtil(hbmFilePath);
 
         String className = hbmUtil.getBeanPackageName()+"."+hbmUtil.getClassName();
+        System.out.println("classname  "+className);
 
         try {
             Class<?> c = Class.forName(className);

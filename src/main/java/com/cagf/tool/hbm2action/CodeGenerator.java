@@ -27,5 +27,7 @@ public class CodeGenerator {
 
         System.out.println("create action over");
         System.out.println("count " + count + " action ");
+
+        System.out.println("----------------------------------------------");
     }
 }

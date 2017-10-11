@@ -57,4 +57,9 @@ public class  @CLASSNAME@ServiceImpl implements @CLASSNAME@Service {
         this.@bean@DAO.remove@CLASSNAME@(id);
    }
 
+    @Transactional
+    public @CLASSNAME@ get@CLASSNAME@(Long id){
+       return this.@bean@DAO.getId(id);
+      }
+
 }

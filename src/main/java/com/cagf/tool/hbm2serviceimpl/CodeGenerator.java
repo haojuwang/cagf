@@ -26,5 +26,6 @@ public class CodeGenerator {
         System.out.println("create serviceimpl  over");
         System.out.println("count " + count + " service impl");
 
+        System.out.println("----------------------------------------------");
     }
 }

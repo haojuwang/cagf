@@ -10,14 +10,14 @@ import com.opensymphony.xwork2.ActionSupport;
 import javax.annotation.Resource;
 
 
-public class Add@CLASSNAME@Action extends ActionSupport{
+public class Update@CLASSNAME@Action extends ActionSupport{
 
 @Resource
 private @CLASSNAME@Service @bean@Service;
 
 
 
-@ADDBEAN@
+@UPDATEBEAN@
 
     @Override
     public void validate() {
@@ -27,9 +27,13 @@ private @CLASSNAME@Service @bean@Service;
     @Override
     public  String execute() throws Exception{
 
-        @SETPROPERTY@
+        @CLASSNAME@ bean = @bean@Service.get@CLASSNAME@( id);
 
-    return SUCCESS;
+        @UPDATEPROPERTY@
+
+        @bean@Service.update@CLASSNAME@(bean);
+
+        return SUCCESS;
 
     }
 

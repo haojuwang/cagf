@@ -26,5 +26,7 @@ public class CodeGenerator {
         System.out.println("create dao impl over");
         System.out.println("count " + count + " dao impl");
 
+
+        System.out.println("----------------------------------------------");
     }
 }

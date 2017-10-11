@@ -16,4 +16,6 @@ public interface @CLASSNAME@Service {
     public void update@CLASSNAME@(@CLASSNAME@ bean);
     public void delete@CLASSNAME@(Long id);
 
+    public @CLASSNAME@ get@CLASSNAME@(Long id);
+
 }
