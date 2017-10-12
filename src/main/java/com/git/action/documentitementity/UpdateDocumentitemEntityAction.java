@@ -143,7 +143,7 @@ private DocumentitemEntityService documentitemEntityService;
 
         documentitemEntityService.updateDocumentitemEntity(bean);
 
-    return SUCCESS;
+        return SUCCESS;
 
     }
 

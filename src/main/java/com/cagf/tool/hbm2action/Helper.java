@@ -38,6 +38,9 @@ public class Helper {
 
         this.genrateUpdateAction();
 
+        this.genrateUpdatepAction();
+
+        this.genrateDeleteAction();
     }
 
     private void genrateAddAction() {
@@ -55,6 +58,16 @@ public class Helper {
     private void genrateUpdateAction() {
         this.generateUpdateActionFile();
     }
+
+    private void genrateUpdatepAction(){
+        this.generateUpdatepActionFile();
+    }
+
+
+    private void genrateDeleteAction() {
+            this.generateDeleteActionFile();
+    }
+
 
 
     private void generateAddActionFile() {
@@ -110,7 +123,7 @@ public class Helper {
 
 
     /**
-     * 生成updatep 文件
+     * 生成update 文件
      */
     private void generateUpdateActionFile() {
         try {
@@ -135,6 +148,66 @@ public class Helper {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    /**
+     * 生成updatep 文件
+     */
+    private void generateUpdatepActionFile() {
+
+        try {
+            String updateActionTemplate = FileUtils.readFileToString(new File(Configer.getInstance().getUpdatepActionextPath()), Charset.forName("utf-8"));
+
+            updateActionTemplate = updateActionTemplate.replaceAll("@ACTIONPACKAGENAME@", hbmUtil.getActionPackageName());
+            updateActionTemplate = updateActionTemplate.replaceAll("@BEANPACKAGENAME@", hbmUtil.getBeanPackageName() + ".*");
+            updateActionTemplate = updateActionTemplate.replaceAll("@SERVICEPACKAGENAME@", hbmUtil.getServicePackageName() + ".*");
+            updateActionTemplate = updateActionTemplate.replaceAll("@CLASSNAME@", hbmUtil.getClassName());
+            updateActionTemplate = updateActionTemplate.replaceAll("@bean@", hbmUtil.getFirstLetterLowerBeanname());
+
+
+
+            String fileName = this.outputPath + File.separator + hbmUtil.getActionPathName() + File.separator + "Updatep" + hbmUtil.getClassName() + "Action.java";
+
+
+            FileUtils.writeStringToFile(new File(fileName), updateActionTemplate, Charset.forName("utf-8"));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+
+    /**
+     * 生成delete action
+     */
+    private void generateDeleteActionFile() {
+        try {
+            String updateActionTemplate = FileUtils.readFileToString(new File(Configer.getInstance().getDeleteActionextPath()), Charset.forName("utf-8"));
+
+            updateActionTemplate = updateActionTemplate.replaceAll("@ACTIONPACKAGENAME@", hbmUtil.getActionPackageName());
+            updateActionTemplate = updateActionTemplate.replaceAll("@BEANPACKAGENAME@", hbmUtil.getBeanPackageName() + ".*");
+            updateActionTemplate = updateActionTemplate.replaceAll("@SERVICEPACKAGENAME@", hbmUtil.getServicePackageName() + ".*");
+            updateActionTemplate = updateActionTemplate.replaceAll("@CLASSNAME@", hbmUtil.getClassName());
+            updateActionTemplate = updateActionTemplate.replaceAll("@bean@", hbmUtil.getFirstLetterLowerBeanname());
+
+
+
+            String fileName = this.outputPath + File.separator + hbmUtil.getActionPathName() + File.separator + "Delete" + hbmUtil.getClassName() + "Action.java";
+
+
+            FileUtils.writeStringToFile(new File(fileName), updateActionTemplate, Charset.forName("utf-8"));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 

@@ -176,7 +176,7 @@ private DocumentCatalogService documentCatalogService;
 
         documentCatalogService.updateDocumentCatalog(bean);
 
-    return SUCCESS;
+        return SUCCESS;
 
     }
 

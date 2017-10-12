@@ -1,8 +1,9 @@
 package com.cagf.tool.util;
 
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -67,7 +68,7 @@ public abstract class BaseDAO<T> {
      * @return
      */
     protected List<T> retrieveObjs(String queryString) {
-        return this.getQuery(queryString).getResultList();
+        return this.getQuery(queryString).list();
 
     }
 
@@ -89,7 +90,7 @@ public abstract class BaseDAO<T> {
         }
 
 
-        return query.getResultList();
+        return query.list();
     }
 
 
@@ -99,7 +100,7 @@ public abstract class BaseDAO<T> {
         query.setParameter(key, value);
 
 
-        return query.getResultList();
+        return query.list();
     }
 
 
@@ -239,6 +240,8 @@ public abstract class BaseDAO<T> {
      */
     protected Query getQuery(String queryString) {
         return this.getSession().createQuery(queryString);
+
+
     }
 
 }
