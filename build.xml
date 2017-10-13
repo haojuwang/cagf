@@ -29,6 +29,7 @@
     <target name="run.persistence.export" depends="init,set.hibernate.mappingfiles">
         <mkdir dir="${classes}"/>
 
+        <!--生成bean-->
         <hibernatetool destdir="${src}">
             <configuration configurationfile="${dbconfig}/hibernate.cfg.xml"/>
             <hbm2java jdk5="true" destdir="${src}"/>
@@ -72,7 +73,7 @@
 
         <!--自动编译-->
         <javac  srcdir="${src}" destdir="${classes}" nowarn="on"
-                debug="${java.debug}" classpathref="ant.run.lib.path"></javac>
+                classpathref="ant.run.lib.path"></javac>
 
 
         <!--action代码的生成需要放在编译之后进行-->
