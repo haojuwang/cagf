@@ -122,6 +122,7 @@ public class HbmUtil {
 
             //com.git.service 包名
             this.servicePackageName = generalPackageName+".service";
+
             this.actionPackageName = generalPackageName+".action."+className.toLowerCase();
 
 

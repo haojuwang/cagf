@@ -30,9 +30,12 @@
         <mkdir dir="${classes}"/>
 
         <!--生成bean-->
-        <hibernatetool destdir="${src}">
+        <hibernatetool >
             <configuration configurationfile="${dbconfig}/hibernate.cfg.xml"/>
             <hbm2java jdk5="true" destdir="${src}"/>
+            <hbm2doc destdir="${dbdoc}"></hbm2doc>
+            <!--export false 在数据库不自动生成-->
+            <hbm2ddl export="false" outputfilename="sql.ddl" format="true" destdir="${dbdoc}"></hbm2ddl>
         </hibernatetool>
 
         <!--生成dao interface-->
@@ -81,6 +84,25 @@
             <classpath refid="ant.run.lib.path"></classpath>
             <arg line="--rootpath=${rootpath}"></arg>
             <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+        <!--生成struts.xml配置文件-->
+        <java classname="com.cagf.tool.hbm2xml.struts.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--filename=${strutsXmlName}"></arg>
+            <arg line="--output=${src}"></arg>
+            <arg line="${hibernate.mappings}"></arg>
+
+        </java>
+
+
+        <!--生成jsp -->
+        <java classname="com.cagf.tool.hbm2jsp.CodeGenerator" fork="true" failonerror="true">
+            <classpath refid="ant.run.lib.path"></classpath>
+            <arg line="--rootpath=${rootpath}"></arg>
+            <arg line="--output=${web}"></arg>
             <arg line="${hibernate.mappings}"></arg>
 
         </java>

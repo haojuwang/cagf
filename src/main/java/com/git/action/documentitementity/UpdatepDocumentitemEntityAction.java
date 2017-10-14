@@ -10,12 +10,14 @@ import com.opensymphony.xwork2.ActionSupport;
 import javax.annotation.Resource;
 
 
+
 public class UpdatepDocumentitemEntityAction extends ActionSupport{
 
 @Resource
 private DocumentitemEntityService documentitemEntityService;
 
     private long id;
+
 
     private DocumentitemEntity documentitemEntity;
 
@@ -46,7 +48,7 @@ private DocumentitemEntityService documentitemEntityService;
     @Override
     public  String execute() throws Exception{
 
-        this.documentitemEntity = documentitemEntityService. getDocumentitemEntity(id);
+        DocumentitemEntity bean = documentitemEntityService.getDocumentitemEntity(id);
 
         return SUCCESS;
 

@@ -1,4 +1,4 @@
-package com.git.action.documentcatalog;
+package com.git.action.users;
 
 import java.util.*;
 
@@ -11,15 +11,15 @@ import javax.annotation.Resource;
 
 
 
-public class UpdatepDocumentCatalogAction extends ActionSupport{
+public class UpdatepUsersAction extends ActionSupport{
 
 @Resource
-private DocumentCatalogService documentCatalogService;
+private UsersService usersService;
 
     private long id;
 
 
-    private DocumentCatalog documentCatalog;
+    private Users users;
 
 
     public long getId() {
@@ -30,13 +30,13 @@ private DocumentCatalogService documentCatalogService;
         this.id = id;
     }
 
-    public DocumentCatalog getDocumentCatalog() {
+    public Users getUsers() {
 
-        return this.documentCatalog;
+        return this.users;
      }
 
-    public void setDocumentCatalog(DocumentCatalog documentCatalog) {
-        this.documentCatalog = documentCatalog;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 
 
@@ -48,7 +48,7 @@ private DocumentCatalogService documentCatalogService;
     @Override
     public  String execute() throws Exception{
 
-        DocumentCatalog bean = documentCatalogService.getDocumentCatalog(id);
+        Users bean = usersService.getUsers(id);
 
         return SUCCESS;
 

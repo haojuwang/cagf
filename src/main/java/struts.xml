@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+  <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+  <!--设置开发模式，默认关闭。如果设置true：将提供更多提示信息，自动加载文件-->
+  <constant name="struts.devMode" value="true"/>
+  <constant name="struts.multipart.maxSize" value="1000000000"/>
+  <package name="DocumentCatalog" namespace="/oa/DocumentCatalog" extends="struts-default">
+    <action name="addDocumentCatalog" class="com.git.action.documentcatalog.AddDocumentCatalogAction">
+      <result name="actionName">listDocumentCatalog</result>
+    </action>
+    <action name="listDocumentCatalog" class="com.git.action.documentcatalog.ListDocumentCatalogAction">
+      <result name="success">listDocumentCatalog.jsp</result>
+    </action>
+    <action name="deleteDocumentCatalog" class="com.git.action.documentcatalog.DeleteDocumentCatalogAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listDocumentCatalog</param>
+      </result>
+    </action>
+    <action name="updatepDocumentCatalog" class="com.git.action.documentcatalog.UpdatepDocumentCatalogAction">
+      <result name="success">updatepDocumentCatalog.jsp</result>
+    </action>
+    <action name="updateDocumentCatalog" class="com.git.action.documentcatalog.UpdateDocumentCatalogAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listDocumentCatalog</param>
+      </result>
+    </action>
+  </package>
+  <package name="DocumentitemEntity" namespace="/oa/DocumentitemEntity" extends="struts-default">
+    <action name="addDocumentitemEntity" class="com.git.action.documentitementity.AddDocumentitemEntityAction">
+      <result name="actionName">listDocumentitemEntity</result>
+    </action>
+    <action name="listDocumentitemEntity" class="com.git.action.documentitementity.ListDocumentitemEntityAction">
+      <result name="success">listDocumentitemEntity.jsp</result>
+    </action>
+    <action name="deleteDocumentitemEntity" class="com.git.action.documentitementity.DeleteDocumentitemEntityAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listDocumentitemEntity</param>
+      </result>
+    </action>
+    <action name="updatepDocumentitemEntity" class="com.git.action.documentitementity.UpdatepDocumentitemEntityAction">
+      <result name="success">updatepDocumentitemEntity.jsp</result>
+    </action>
+    <action name="updateDocumentitemEntity" class="com.git.action.documentitementity.UpdateDocumentitemEntityAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listDocumentitemEntity</param>
+      </result>
+    </action>
+  </package>
+  <package name="Users" namespace="/oa/Users" extends="struts-default">
+    <action name="addUsers" class="com.git.action.users.AddUsersAction">
+      <result name="actionName">listUsers</result>
+    </action>
+    <action name="listUsers" class="com.git.action.users.ListUsersAction">
+      <result name="success">listUsers.jsp</result>
+    </action>
+    <action name="deleteUsers" class="com.git.action.users.DeleteUsersAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listUsers</param>
+      </result>
+    </action>
+    <action name="updatepUsers" class="com.git.action.users.UpdatepUsersAction">
+      <result name="success">updatepUsers.jsp</result>
+    </action>
+    <action name="updateUsers" class="com.git.action.users.UpdateUsersAction">
+      <result name="success" type="redirectAction">
+        <param name="actionName">listUsers</param>
+      </result>
+    </action>
+  </package>
+</struts>

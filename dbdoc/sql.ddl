@@ -28,6 +28,13 @@
         primary key (id)
     );
 
+    create table users (
+        id bigint not null,
+        username_ varchar(50),
+        password_ bigint,
+        primary key (id)
+    );
+
     alter table documentcatalog 
         add index FK78A52A9E28BD3E43 (parentId_), 
         add constraint FK78A52A9E28BD3E43 

@@ -1,25 +1,22 @@
-package @ACTIONPACKAGENAME@;
+package com.git.action.users;
 
 import java.util.*;
 
-import @BEANPACKAGENAME@;
-import @SERVICEPACKAGENAME@;
+import com.git.bean.*;
+import com.git.service.*;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import javax.annotation.Resource;
 
 
-
-public class Updatep@CLASSNAME@Action extends ActionSupport{
+public class DeleteUsersAction extends ActionSupport{
 
 @Resource
-private @CLASSNAME@Service @bean@Service;
+private UsersService usersService;
 
     private long id;
 
-
-    private @CLASSNAME@ @bean@;
 
 
     public long getId() {
@@ -28,15 +25,6 @@ private @CLASSNAME@Service @bean@Service;
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public @CLASSNAME@ get@CLASSNAME@() {
-
-        return this.@bean@;
-     }
-
-    public void set@CLASSNAME@(@CLASSNAME@ @bean@) {
-        this.@bean@ = @bean@;
     }
 
 
@@ -48,7 +36,7 @@ private @CLASSNAME@Service @bean@Service;
     @Override
     public  String execute() throws Exception{
 
-        @CLASSNAME@ bean = @bean@Service.get@CLASSNAME@(id);
+       usersService.deleteUsers(id);
 
         return SUCCESS;
 

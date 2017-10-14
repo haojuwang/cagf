@@ -76,5 +76,6 @@
          -->
         <mapping resource="DocumentCatalog.hbm.xml"/>
         <mapping resource="DocumentitemEntity.hbm.xml"/>
+        <mapping resource="Users.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
