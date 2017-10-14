@@ -48,7 +48,7 @@ private DocumentitemEntityService documentitemEntityService;
     @Override
     public  String execute() throws Exception{
 
-        DocumentitemEntity bean = documentitemEntityService.getDocumentitemEntity(id);
+        documentitemEntity = documentitemEntityService.getDocumentitemEntity(id);
 
         return SUCCESS;
 

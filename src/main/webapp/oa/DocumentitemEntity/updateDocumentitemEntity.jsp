@@ -20,50 +20,77 @@
 
 
 
-                <td align="right">name</td>
-                <td>
-                    <input type="text" name="name" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">name</td>
+                    <td>
+                        <input type="text" name="name" size="50" value="<s:property value='documentitemEntity.name' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">authorId</td>
-                <td>
-                    <input type="text" name="authorId" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">authorId</td>
+                    <td>
+                        <input type="text" name="authorId" size="50" value="<s:property value='documentitemEntity.authorId' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">authorName</td>
-                <td>
-                    <input type="text" name="authorName" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">authorName</td>
+                    <td>
+                        <input type="text" name="authorName" size="50" value="<s:property value='documentitemEntity.authorName' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">date</td>
-                <td>
-                    <input type="text" name="date" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">date</td>
+                    <td>
+                        <input type="text" name="date" size="50" value="<s:property value='documentitemEntity.date' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">realSize</td>
-                <td>
-                    <input type="text" name="realSize" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">realSize</td>
+                    <td>
+                        <input type="text" name="realSize" size="50" value="<s:property value='documentitemEntity.realSize' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">size</td>
-                <td>
-                    <input type="text" name="size" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">size</td>
+                    <td>
+                        <input type="text" name="size" size="50" value="<s:property value='documentitemEntity.size' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">randomName</td>
-                <td>
-                    <input type="text" name="randomName" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">randomName</td>
+                    <td>
+                        <input type="text" name="randomName" size="50" value="<s:property value='documentitemEntity.randomName' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">type</td>
-                <td>
-                    <input type="text" name="type" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">type</td>
+                    <td>
+                        <input type="text" name="type" size="50" value="<s:property value='documentitemEntity.type' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">documentCatalog</td>
-                <td>
-                    <input type="text" name="documentCatalog" size="50" value="<s:property value='documentitemEntity.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">documentCatalog</td>
+                    <td>
+                        <input type="text" name="documentCatalog" size="50" value="<s:property value='documentitemEntity.documentCatalog' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
 
 

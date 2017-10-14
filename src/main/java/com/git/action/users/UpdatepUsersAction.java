@@ -48,7 +48,7 @@ private UsersService usersService;
     @Override
     public  String execute() throws Exception{
 
-        Users bean = usersService.getUsers(id);
+        users = usersService.getUsers(id);
 
         return SUCCESS;
 

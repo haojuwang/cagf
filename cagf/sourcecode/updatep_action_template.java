@@ -48,7 +48,7 @@ private @CLASSNAME@Service @bean@Service;
     @Override
     public  String execute() throws Exception{
 
-        @CLASSNAME@ bean = @bean@Service.get@CLASSNAME@(id);
+        @bean@ = @bean@Service.get@CLASSNAME@(id);
 
         return SUCCESS;
 

@@ -115,7 +115,7 @@ public class Helper {
 
                     Element updatepResult =  updatepAction.addElement("result");
                     updatepResult.addAttribute("name","success");
-                    updatepResult.addText("updatep"+className+".jsp");
+                    updatepResult.addText("update"+className+".jsp");
 
 
 
@@ -126,9 +126,9 @@ public class Helper {
 
                     Element updateResult =  updateAction.addElement("result");
                     updateResult.addAttribute("name","success").addAttribute("type","redirectAction");
-                    Element updateParam = updateResult.addElement("param");
-                    updateParam.addAttribute("name","actionName");
-                    updateParam.addText("list"+className);
+                    Element updatearam = updateResult.addElement("param");
+                    updatearam.addAttribute("name","actionName");
+                    updatearam.addText("list"+className);
 
 
                     System.out.println("===packageElement ----------------------" + packageElement.attributeValue("name"));

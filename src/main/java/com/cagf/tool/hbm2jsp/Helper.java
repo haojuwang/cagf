@@ -115,10 +115,14 @@ public class Helper {
 
     private String getUPDATEFileData() {
 
-        String jsp="                <td align=\"right\">@NAME@</td>\n" +
-                "                <td>\n" +
-                "                    <input type=\"text\" name=\"@NAME@\" size=\"50\" value=\"<s:property value='@bean@.name' />\"class=\"inpMain\">\n" +
-                "                </td>";
+
+        String jsp = "                <tr>\n" +
+                "                    <td align=\"right\">@NAME@</td>\n" +
+                "                    <td>\n" +
+                "                        <input type=\"text\" name=\"@NAME@\" size=\"50\" value=\"<s:property value='@bean@.@NAME@' />\"\n" +
+                "                               class=\"inpMain\">\n" +
+                "                    </td>\n" +
+                "                <tr/>";
 
         StringBuffer sb = new StringBuffer();
         String[][] fields = ClassUtil.getFields(hbmFilePath);

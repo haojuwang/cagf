@@ -19,7 +19,7 @@
       </result>
     </action>
     <action name="updatepDocumentCatalog" class="com.git.action.documentcatalog.UpdatepDocumentCatalogAction">
-      <result name="success">updatepDocumentCatalog.jsp</result>
+      <result name="success">updateDocumentCatalog.jsp</result>
     </action>
     <action name="updateDocumentCatalog" class="com.git.action.documentcatalog.UpdateDocumentCatalogAction">
       <result name="success" type="redirectAction">
@@ -40,7 +40,7 @@
       </result>
     </action>
     <action name="updatepDocumentitemEntity" class="com.git.action.documentitementity.UpdatepDocumentitemEntityAction">
-      <result name="success">updatepDocumentitemEntity.jsp</result>
+      <result name="success">updateDocumentitemEntity.jsp</result>
     </action>
     <action name="updateDocumentitemEntity" class="com.git.action.documentitementity.UpdateDocumentitemEntityAction">
       <result name="success" type="redirectAction">
@@ -61,7 +61,7 @@
       </result>
     </action>
     <action name="updatepUsers" class="com.git.action.users.UpdatepUsersAction">
-      <result name="success">updatepUsers.jsp</result>
+      <result name="success">updateUsers.jsp</result>
     </action>
     <action name="updateUsers" class="com.git.action.users.UpdateUsersAction">
       <result name="success" type="redirectAction">

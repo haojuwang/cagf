@@ -20,65 +20,101 @@
 
 
 
-                <td align="right">name</td>
-                <td>
-                    <input type="text" name="name" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">name</td>
+                    <td>
+                        <input type="text" name="name" size="50" value="<s:property value='documentCatalog.name' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">date</td>
-                <td>
-                    <input type="text" name="date" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">date</td>
+                    <td>
+                        <input type="text" name="date" size="50" value="<s:property value='documentCatalog.date' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">flag</td>
-                <td>
-                    <input type="text" name="flag" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">flag</td>
+                    <td>
+                        <input type="text" name="flag" size="50" value="<s:property value='documentCatalog.flag' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">authorId</td>
-                <td>
-                    <input type="text" name="authorId" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">authorId</td>
+                    <td>
+                        <input type="text" name="authorId" size="50" value="<s:property value='documentCatalog.authorId' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">authorName</td>
-                <td>
-                    <input type="text" name="authorName" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">authorName</td>
+                    <td>
+                        <input type="text" name="authorName" size="50" value="<s:property value='documentCatalog.authorName' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">type</td>
-                <td>
-                    <input type="text" name="type" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">type</td>
+                    <td>
+                        <input type="text" name="type" size="50" value="<s:property value='documentCatalog.type' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">content</td>
-                <td>
-                    <input type="text" name="content" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">content</td>
+                    <td>
+                        <input type="text" name="content" size="50" value="<s:property value='documentCatalog.content' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">order</td>
-                <td>
-                    <input type="text" name="order" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">order</td>
+                    <td>
+                        <input type="text" name="order" size="50" value="<s:property value='documentCatalog.order' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">address</td>
-                <td>
-                    <input type="text" name="address" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">address</td>
+                    <td>
+                        <input type="text" name="address" size="50" value="<s:property value='documentCatalog.address' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">children</td>
-                <td>
-                    <input type="text" name="children" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">children</td>
+                    <td>
+                        <input type="text" name="children" size="50" value="<s:property value='documentCatalog.children' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">items</td>
-                <td>
-                    <input type="text" name="items" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">items</td>
+                    <td>
+                        <input type="text" name="items" size="50" value="<s:property value='documentCatalog.items' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">parent</td>
-                <td>
-                    <input type="text" name="parent" size="50" value="<s:property value='documentCatalog.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">parent</td>
+                    <td>
+                        <input type="text" name="parent" size="50" value="<s:property value='documentCatalog.parent' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
 
 

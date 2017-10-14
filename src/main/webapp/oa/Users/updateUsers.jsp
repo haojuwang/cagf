@@ -20,15 +20,21 @@
 
 
 
-                <td align="right">username</td>
-                <td>
-                    <input type="text" name="username" size="50" value="<s:property value='users.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">username</td>
+                    <td>
+                        <input type="text" name="username" size="50" value="<s:property value='users.username' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
-                <td align="right">password</td>
-                <td>
-                    <input type="text" name="password" size="50" value="<s:property value='users.name' />"class="inpMain">
-                </td>
+                <tr>
+                    <td align="right">password</td>
+                    <td>
+                        <input type="text" name="password" size="50" value="<s:property value='users.password' />"
+                               class="inpMain">
+                    </td>
+                <tr/>
 
 
 

@@ -48,7 +48,7 @@ private DocumentCatalogService documentCatalogService;
     @Override
     public  String execute() throws Exception{
 
-        DocumentCatalog bean = documentCatalogService.getDocumentCatalog(id);
+        documentCatalog = documentCatalogService.getDocumentCatalog(id);
 
         return SUCCESS;
 
