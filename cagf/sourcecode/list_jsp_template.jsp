@@ -12,7 +12,7 @@
     <!-- 当前位置 -->
     <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong></div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="product_category.php" class="actionBtn">文档分类</a>添加分类</h3>
+        <h3><a href="${pageContext.request.contextPath}/oa/@CLASSNAME@/add@CLASSNAME@.jsp" class="actionBtn">添加@CLASSNAME@</a>@CLASSNAME@</h3>
         <div class="filter">
             <form action="product.php" method="post">
                 <select name="cat_id">
@@ -36,10 +36,10 @@
                         <th width="80" align="center">操作</th>
                     </tr>
 
-                    <c:forEach items="${list}" var="bean" varStatus="vs">
+                    <s:iterator value="list" var="bean" status="vs">
                         <tr>
-                            <td align="center"><input type="checkbox" name="checkbox[]" value="${document.id}"/></td>
-                            <td align="center">${vs.index}</td>
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="<s:property value="id" />"/></td>
+                            <td align="center">${vs.count}</td>
  @LIST2@
                             <td align="center">
                                 <a href="${pageContext.request.contextPath}/oa/@CLASSNAME@/updatep@CLASSNAME@?id=${bean.id}">编辑</a> |
@@ -49,7 +49,7 @@
                         </tr>
 
 
-                    </c:forEach>
+                    </s:iterator>
 
                 </table>
                 <div class="action">

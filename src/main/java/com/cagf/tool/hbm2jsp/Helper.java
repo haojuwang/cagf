@@ -165,7 +165,7 @@ public class Helper {
 
     private String getLIST2FileData() {
 //        String jsp = "<td align=\"center\">${bean.@NAME@}</td>";
-        String jsp = "                            <td align=\"center\">@NAME@</td>";
+        String jsp = "                            <td align=\"center\"><s:property value=\"@NAME@\" /></td>";
         StringBuffer sb = new StringBuffer();
         String[][] fields = ClassUtil.getFields(hbmFilePath);
         for (int i = 0; i < fields.length; ++i) {
@@ -175,7 +175,6 @@ public class Helper {
                 continue;
             }
 
-            name = "{bean."+name+"}";
 
             String str = jsp.replaceAll("@NAME@", name);
             sb.append(str).append("\n\n");

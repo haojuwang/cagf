@@ -12,7 +12,7 @@
     <!-- 当前位置 -->
     <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong></div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="product_category.php" class="actionBtn">文档分类</a>添加分类</h3>
+        <h3><a href="${pageContext.request.contextPath}/oa/DocumentitemEntity/addDocumentitemEntity.jsp" class="actionBtn">添加DocumentitemEntity</a>DocumentitemEntity</h3>
         <div class="filter">
             <form action="product.php" method="post">
                 <select name="cat_id">
@@ -54,27 +54,27 @@
                         <th width="80" align="center">操作</th>
                     </tr>
 
-                    <c:forEach items="${list}" var="bean" varStatus="vs">
+                    <s:iterator value="list" var="bean" status="vs">
                         <tr>
-                            <td align="center"><input type="checkbox" name="checkbox[]" value="${document.id}"/></td>
-                            <td align="center">${vs.index}</td>
-                             <td align="center">{bean.name}</td>
+                            <td align="center"><input type="checkbox" name="checkbox[]" value="<s:property value="id" />"/></td>
+                            <td align="center">${vs.count}</td>
+                             <td align="center"><s:property value="name" /></td>
 
-                            <td align="center">{bean.authorId}</td>
+                            <td align="center"><s:property value="authorId" /></td>
 
-                            <td align="center">{bean.authorName}</td>
+                            <td align="center"><s:property value="authorName" /></td>
 
-                            <td align="center">{bean.date}</td>
+                            <td align="center"><s:property value="date" /></td>
 
-                            <td align="center">{bean.realSize}</td>
+                            <td align="center"><s:property value="realSize" /></td>
 
-                            <td align="center">{bean.size}</td>
+                            <td align="center"><s:property value="size" /></td>
 
-                            <td align="center">{bean.randomName}</td>
+                            <td align="center"><s:property value="randomName" /></td>
 
-                            <td align="center">{bean.type}</td>
+                            <td align="center"><s:property value="type" /></td>
 
-                            <td align="center">{bean.documentCatalog}</td>
+                            <td align="center"><s:property value="documentCatalog" /></td>
 
 
                             <td align="center">
@@ -85,7 +85,7 @@
                         </tr>
 
 
-                    </c:forEach>
+                    </s:iterator>
 
                 </table>
                 <div class="action">
