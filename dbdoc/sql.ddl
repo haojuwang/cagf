@@ -31,7 +31,7 @@
     create table users (
         id bigint not null,
         username_ varchar(50),
-        password_ bigint,
+        password_ varchar(255),
         primary key (id)
     );
 

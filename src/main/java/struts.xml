@@ -16,6 +16,8 @@
     <action name="deleteDocumentCatalog" class="com.git.action.documentcatalog.DeleteDocumentCatalogAction">
       <result name="success" type="redirectAction">
         <param name="actionName">listDocumentCatalog</param>
+        <param name="start">${start}</param>
+        <param name="range">${range}</param>
       </result>
     </action>
     <action name="updatepDocumentCatalog" class="com.git.action.documentcatalog.UpdatepDocumentCatalogAction">
@@ -37,6 +39,8 @@
     <action name="deleteDocumentitemEntity" class="com.git.action.documentitementity.DeleteDocumentitemEntityAction">
       <result name="success" type="redirectAction">
         <param name="actionName">listDocumentitemEntity</param>
+        <param name="start">${start}</param>
+        <param name="range">${range}</param>
       </result>
     </action>
     <action name="updatepDocumentitemEntity" class="com.git.action.documentitementity.UpdatepDocumentitemEntityAction">
@@ -58,6 +62,8 @@
     <action name="deleteUsers" class="com.git.action.users.DeleteUsersAction">
       <result name="success" type="redirectAction">
         <param name="actionName">listUsers</param>
+        <param name="start">${start}</param>
+        <param name="range">${range}</param>
       </result>
     </action>
     <action name="updatepUsers" class="com.git.action.users.UpdatepUsersAction">

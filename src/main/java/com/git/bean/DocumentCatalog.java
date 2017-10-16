@@ -1,5 +1,5 @@
 package com.git.bean;
-// Generated 2017-10-15 0:18:24 by Hibernate Tools 3.2.1.GA
+// Generated 2017-10-15 23:52:17 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;

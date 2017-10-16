@@ -106,6 +106,13 @@ public class Helper {
                     deleteParam.addAttribute("name","actionName");
                     deleteParam.addText("list"+className);
 
+                    Element deleteStart = deleteResult.addElement("param");
+                    deleteStart.addAttribute("name","start").addText("${start}");
+
+                    Element deleteRange = deleteResult.addElement("param");
+                    deleteRange.addAttribute("name","range").addText("${range}");
+
+
 
 
                     //updatep action

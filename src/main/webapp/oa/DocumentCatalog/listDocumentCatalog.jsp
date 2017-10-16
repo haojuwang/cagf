@@ -90,8 +90,8 @@
 
 
                             <td align="center">
-                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/updatepDocumentCatalog?id=${bean.id}">编辑</a> |
-                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/deleteDocumentCatalog?id=${bean.id}">删除</a>
+                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/updatepDocumentCatalog?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">编辑</a> |
+                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/deleteDocumentCatalog?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">删除</a>
                             </td>
 
                         </tr>
@@ -121,8 +121,10 @@
         </div>
 
         <div class="clear"></div>
-        <div class="pager">总计 15 个记录，共 1 页，当前第 1 页 | <a href="product.php?page=1">第一页</a> 上一页 下一页 <a
-                href="product.php?page=1">最末页</a></div>
+        <div class="pager">
+            <s:property value="pageInfo"  escapeHtml="false" />
+
+        </div>
 
     </div>
 
