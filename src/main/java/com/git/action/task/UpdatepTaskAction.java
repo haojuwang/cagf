@@ -1,4 +1,4 @@
-package com.git.action.users;
+package com.git.action.task;
 
 import java.util.*;
 
@@ -11,15 +11,15 @@ import javax.annotation.Resource;
 
 
 
-public class UpdatepUsersAction extends ActionSupport{
+public class UpdatepTaskAction extends ActionSupport{
 
 @Resource
-private UsersService usersService;
+private TaskService taskService;
 
     private long id;
 
 
-    private Users users;
+    private Task task;
 
 
     public long getId() {
@@ -30,13 +30,13 @@ private UsersService usersService;
         this.id = id;
     }
 
-    public Users getUsers() {
+    public Task getTask() {
 
-        return this.users;
+        return this.task;
      }
 
-    public void setUsers(Users users) {
-        this.users = users;
+    public void setTask(Task task) {
+        this.task = task;
     }
 
 
@@ -48,7 +48,7 @@ private UsersService usersService;
     @Override
     public  String execute() throws Exception{
 
-        users = usersService.getUsers(id);
+        task = taskService.getTask(id);
 
         return SUCCESS;
 

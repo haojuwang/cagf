@@ -15,7 +15,7 @@
     <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong></div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <h3><a href="product_category.php" class="actionBtn">文档分类</a>添加分类</h3>
-        <form action="${pageContext.request.contextPath}/oa/DocumentCatalog/addDocumentCatalog" method="post" id="forms">
+        <form action="${pageContext.request.contextPath}/oa/Task/addTask" method="post" id="forms">
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
 
 
@@ -28,58 +28,23 @@
                 </tr>
 
                 <tr>
-                    <td align="right">date</td>
+                    <td align="right">description</td>
                     <td>
-                        <input type="text" name="date" size="50" class="inpMain">
+                        <input type="text" name="description" size="50" class="inpMain">
                     </td>
                 </tr>
 
                 <tr>
-                    <td align="right">flag</td>
+                    <td align="right">plannedStartDate</td>
                     <td>
-                        <input type="text" name="flag" size="50" class="inpMain">
+                        <input type="text" name="plannedStartDate" size="50" class="inpMain">
                     </td>
                 </tr>
 
                 <tr>
-                    <td align="right">authorId</td>
+                    <td align="right">plannedEndDate</td>
                     <td>
-                        <input type="text" name="authorId" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">authorName</td>
-                    <td>
-                        <input type="text" name="authorName" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">type</td>
-                    <td>
-                        <input type="text" name="type" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">content</td>
-                    <td>
-                        <input type="text" name="content" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">order</td>
-                    <td>
-                        <input type="text" name="order" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">address</td>
-                    <td>
-                        <input type="text" name="address" size="50" class="inpMain">
+                        <input type="text" name="plannedEndDate" size="50" class="inpMain">
                     </td>
                 </tr>
 
@@ -87,13 +52,6 @@
                     <td align="right">children</td>
                     <td>
                         <input type="text" name="children" size="50" class="inpMain">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td align="right">items</td>
-                    <td>
-                        <input type="text" name="items" size="50" class="inpMain">
                     </td>
                 </tr>
 

@@ -1,4 +1,4 @@
-package com.git.action.documentitementity;
+package com.git.action.task;
 
 import java.util.*;
 
@@ -10,10 +10,10 @@ import com.opensymphony.xwork2.ActionSupport;
 import javax.annotation.Resource;
 
 
-public class DeleteDocumentitemEntityAction extends ActionSupport{
+public class DeleteTaskAction extends ActionSupport{
 
 @Resource
-private DocumentitemEntityService documentitemEntityService;
+private TaskService taskService;
 
     private long id;
     private int start;
@@ -58,7 +58,7 @@ private DocumentitemEntityService documentitemEntityService;
     @Override
     public  String execute() throws Exception{
 
-       documentitemEntityService.deleteDocumentitemEntity(id);
+       taskService.deleteTask(id);
 
         return SUCCESS;
 

@@ -74,8 +74,9 @@
         <!-- 引入ORM 映射文件
             填写src之后的路径
          -->
-        <mapping resource="DocumentCatalog.hbm.xml"/>
-        <mapping resource="DocumentitemEntity.hbm.xml"/>
-        <mapping resource="Users.hbm.xml"/>
+        <!--<mapping resource="DocumentCatalog.hbm.xml"/>-->
+        <!--<mapping resource="DocumentitemEntity.hbm.xml"/>-->
+        <!--<mapping resource="Users.hbm.xml"/>-->
+        <mapping resource="Task.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

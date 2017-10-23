@@ -6,72 +6,28 @@
   <!--设置开发模式，默认关闭。如果设置true：将提供更多提示信息，自动加载文件-->
   <constant name="struts.devMode" value="true"/>
   <constant name="struts.multipart.maxSize" value="1000000000"/>
-  <package name="DocumentCatalog" namespace="/oa/DocumentCatalog" extends="struts-default">
-    <action name="addDocumentCatalog" class="com.git.action.documentcatalog.AddDocumentCatalogAction">
-      <result name="actionName">listDocumentCatalog</result>
+
+
+  <package name="Task" namespace="/oa/Task" extends="struts-default">
+    <action name="addTask" class="com.git.action.task.AddTaskAction">
+      <result name="actionName">listTask</result>
     </action>
-    <action name="listDocumentCatalog" class="com.git.action.documentcatalog.ListDocumentCatalogAction">
-      <result name="success">listDocumentCatalog.jsp</result>
+    <action name="listTask" class="com.git.action.task.ListTaskAction">
+      <result name="success">listTask.jsp</result>
     </action>
-    <action name="deleteDocumentCatalog" class="com.git.action.documentcatalog.DeleteDocumentCatalogAction">
+    <action name="deleteTask" class="com.git.action.task.DeleteTaskAction">
       <result name="success" type="redirectAction">
-        <param name="actionName">listDocumentCatalog</param>
+        <param name="actionName">listTask</param>
         <param name="start">${start}</param>
         <param name="range">${range}</param>
       </result>
     </action>
-    <action name="updatepDocumentCatalog" class="com.git.action.documentcatalog.UpdatepDocumentCatalogAction">
-      <result name="success">updateDocumentCatalog.jsp</result>
+    <action name="updatepTask" class="com.git.action.task.UpdatepTaskAction">
+      <result name="success">updateTask.jsp</result>
     </action>
-    <action name="updateDocumentCatalog" class="com.git.action.documentcatalog.UpdateDocumentCatalogAction">
+    <action name="updateTask" class="com.git.action.task.UpdateTaskAction">
       <result name="success" type="redirectAction">
-        <param name="actionName">listDocumentCatalog</param>
-      </result>
-    </action>
-  </package>
-  <package name="DocumentitemEntity" namespace="/oa/DocumentitemEntity" extends="struts-default">
-    <action name="addDocumentitemEntity" class="com.git.action.documentitementity.AddDocumentitemEntityAction">
-      <result name="actionName">listDocumentitemEntity</result>
-    </action>
-    <action name="listDocumentitemEntity" class="com.git.action.documentitementity.ListDocumentitemEntityAction">
-      <result name="success">listDocumentitemEntity.jsp</result>
-    </action>
-    <action name="deleteDocumentitemEntity" class="com.git.action.documentitementity.DeleteDocumentitemEntityAction">
-      <result name="success" type="redirectAction">
-        <param name="actionName">listDocumentitemEntity</param>
-        <param name="start">${start}</param>
-        <param name="range">${range}</param>
-      </result>
-    </action>
-    <action name="updatepDocumentitemEntity" class="com.git.action.documentitementity.UpdatepDocumentitemEntityAction">
-      <result name="success">updateDocumentitemEntity.jsp</result>
-    </action>
-    <action name="updateDocumentitemEntity" class="com.git.action.documentitementity.UpdateDocumentitemEntityAction">
-      <result name="success" type="redirectAction">
-        <param name="actionName">listDocumentitemEntity</param>
-      </result>
-    </action>
-  </package>
-  <package name="Users" namespace="/oa/Users" extends="struts-default">
-    <action name="addUsers" class="com.git.action.users.AddUsersAction">
-      <result name="actionName">listUsers</result>
-    </action>
-    <action name="listUsers" class="com.git.action.users.ListUsersAction">
-      <result name="success">listUsers.jsp</result>
-    </action>
-    <action name="deleteUsers" class="com.git.action.users.DeleteUsersAction">
-      <result name="success" type="redirectAction">
-        <param name="actionName">listUsers</param>
-        <param name="start">${start}</param>
-        <param name="range">${range}</param>
-      </result>
-    </action>
-    <action name="updatepUsers" class="com.git.action.users.UpdatepUsersAction">
-      <result name="success">updateUsers.jsp</result>
-    </action>
-    <action name="updateUsers" class="com.git.action.users.UpdateUsersAction">
-      <result name="success" type="redirectAction">
-        <param name="actionName">listUsers</param>
+        <param name="actionName">listTask</param>
       </result>
     </action>
   </package>

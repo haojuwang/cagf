@@ -12,7 +12,7 @@
     <!-- 当前位置 -->
     <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong></div>
     <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="${pageContext.request.contextPath}/oa/DocumentCatalog/addDocumentCatalog.jsp" class="actionBtn">添加DocumentCatalog</a>DocumentCatalog</h3>
+        <h3><a href="${pageContext.request.contextPath}/oa/Task/addTask.jsp" class="actionBtn">添加Task</a>Task</h3>
         <div class="filter">
             <form action="product.php" method="post">
                 <select name="cat_id">
@@ -34,25 +34,13 @@
                         <th width="40" align="center">编号</th>
                         <th width="80" align="center">name</th>
 
-                        <th width="80" align="center">date</th>
+                        <th width="80" align="center">description</th>
 
-                        <th width="80" align="center">flag</th>
+                        <th width="80" align="center">plannedStartDate</th>
 
-                        <th width="80" align="center">authorId</th>
-
-                        <th width="80" align="center">authorName</th>
-
-                        <th width="80" align="center">type</th>
-
-                        <th width="80" align="center">content</th>
-
-                        <th width="80" align="center">order</th>
-
-                        <th width="80" align="center">address</th>
+                        <th width="80" align="center">plannedEndDate</th>
 
                         <th width="80" align="center">children</th>
-
-                        <th width="80" align="center">items</th>
 
                         <th width="80" align="center">parent</th>
 
@@ -66,32 +54,20 @@
                             <td align="center">${vs.count}</td>
                              <td align="center"><s:property value="name" /></td>
 
-                            <td align="center"><s:property value="date" /></td>
+                            <td align="center"><s:property value="description" /></td>
 
-                            <td align="center"><s:property value="flag" /></td>
+                            <td align="center"><s:property value="plannedStartDate" /></td>
 
-                            <td align="center"><s:property value="authorId" /></td>
-
-                            <td align="center"><s:property value="authorName" /></td>
-
-                            <td align="center"><s:property value="type" /></td>
-
-                            <td align="center"><s:property value="content" /></td>
-
-                            <td align="center"><s:property value="order" /></td>
-
-                            <td align="center"><s:property value="address" /></td>
+                            <td align="center"><s:property value="plannedEndDate" /></td>
 
                             <td align="center"><s:property value="children" /></td>
-
-                            <td align="center"><s:property value="items" /></td>
 
                             <td align="center"><s:property value="parent" /></td>
 
 
                             <td align="center">
-                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/updatepDocumentCatalog?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">编辑</a> |
-                                <a href="${pageContext.request.contextPath}/oa/DocumentCatalog/deleteDocumentCatalog?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">删除</a>
+                                <a href="${pageContext.request.contextPath}/oa/Task/updatepTask?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">编辑</a> |
+                                <a href="${pageContext.request.contextPath}/oa/Task/deleteTask?id=${bean.id}&start=<s:property value='start'/>&range=<s:property value='range'/>">删除</a>
                             </td>
 
                         </tr>

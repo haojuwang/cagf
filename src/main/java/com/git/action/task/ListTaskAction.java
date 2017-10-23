@@ -1,4 +1,4 @@
-package com.git.action.documentitementity;
+package com.git.action.task;
 
 import java.util.*;
 
@@ -11,24 +11,24 @@ import javax.annotation.Resource;
 import com.cagf.tool.util.* ;
 import org.apache.struts2.ServletActionContext;
 
-public class ListDocumentitemEntityAction extends ActionSupport{
+public class ListTaskAction extends ActionSupport{
 
 @Resource
-private DocumentitemEntityService documentitemEntityService;
+private TaskService taskService;
 
     private int start;
     private int range;
     private String pageInfo;
 
 
-    private List<DocumentitemEntity> list;
+    private List<Task> list;
 
-    public void setList(List<DocumentitemEntity> list) {
+    public void setList(List<Task> list) {
         this.list = list;
 
      }
 
-     public List<DocumentitemEntity> getList(){
+     public List<Task> getList(){
 
         return this.list;
      }
@@ -71,9 +71,9 @@ private DocumentitemEntityService documentitemEntityService;
         }
 
 
-        long count = this.documentitemEntityService.getDocumentitemEntityCount();
+        long count = this.taskService.getTaskCount();
         this.pageInfo = Page.getPage(ServletActionContext.getRequest(),"",start,range,count);
-        this.list = this.documentitemEntityService.listDocumentitemEntitys(this.start,this.range);
+        this.list = this.taskService.listTasks(this.start,this.range);
 
         return SUCCESS;
 
