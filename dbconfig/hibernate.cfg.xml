@@ -77,6 +77,9 @@
         <!--<mapping resource="DocumentCatalog.hbm.xml"/>-->
         <!--<mapping resource="DocumentitemEntity.hbm.xml"/>-->
         <!--<mapping resource="Users.hbm.xml"/>-->
-        <mapping resource="Task.hbm.xml"/>
+        <!--<mapping resource="Task.hbm.xml"/>-->
+        <mapping resource="Board.hbm.xml"/>
+        <mapping resource="Post.hbm.xml"/>
+        <mapping resource="Topic.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
